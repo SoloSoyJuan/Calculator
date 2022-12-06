@@ -26,7 +26,15 @@ public class MainWindowController {
 
     @FXML
     void onClick(ActionEvent event) {
-
+        Button b = (Button) event.getSource();
+        String info = "";
+        if (b.getText().equals("Calculate")){
+            info = historyTA.getText()+operationBoxTF.getText()+"\n";
+            historyTA.setText(info);
+            operationBoxTF.clear();
+        }else {
+            historyTA.clear();
+        }
     }
 
 }
