@@ -65,7 +65,7 @@ public class MainWindowController {
     @FXML
     private TextField operationBoxTF;
 
-    private String operation;
+    private String operation; // indicator of the operation
 
     public MainWindowController(){
         this.operation = "";
@@ -73,21 +73,21 @@ public class MainWindowController {
 
     @FXML
     void onClick(ActionEvent event) {
-        Button b = (Button) event.getSource();
-        String info = b.getText();
-        if(info.equals("1") || info.equals("2") || info.equals("3") || info.equals("4") || info.equals("5") ||info.equals("6") || info.equals("7") || info.equals("8") || info.equals("9") || info.equals("0")){
+        Button b = (Button) event.getSource(); // safe the button clicked
+        String info = b.getText(); // get the text of the button
+        if(info.equals("1") || info.equals("2") || info.equals("3") || info.equals("4") || info.equals("5") ||info.equals("6") || info.equals("7") || info.equals("8") || info.equals("9") || info.equals("0")){ // see if is a number
             info = operationBoxTF.getText()+info;
             operationBoxTF.setText(info);
-        }else if(info.equals("+") || info.equals("-") || info.equals("*") || info.equals("/")){
+        }else if(info.equals("+") || info.equals("-") || info.equals("*") || info.equals("/")){ // see if is an operation symbol
             this.operation = info+"";
             info = operationBoxTF.getText()+info;
             operationBoxTF.setText(info);
-        }else if (info.equals("Calculate")){
+        }else if (info.equals("Calculate")){ // to calculate
             calculated();
-        }else if(info.equals("clean")){
+        }else if(info.equals("clean")){ // clean the history
             historyTA.clear();
         }else {
-            info = operationBoxTF.getText();
+            info = operationBoxTF.getText(); // delete de last character added
             operationBoxTF.setText(info.substring(0,info.length()-1));
         }
     }
@@ -95,7 +95,7 @@ public class MainWindowController {
     public void calculated(){
         String a = operationBoxTF.getText();
         String [] b;
-        switch (operation){
+        switch (operation){ // see the character of the operation and split the text of it
             case "+":
                 b = a.split("\\+");
                 break;
@@ -113,11 +113,11 @@ public class MainWindowController {
                 break;
         }
 
-        int num1 = Integer.parseInt(b[0]);
-        int num2 = Integer.parseInt(b[1]);
+        int num1 = Integer.parseInt(b[0]); // get the first number
+        int num2 = Integer.parseInt(b[1]); // get the second number
         int total = 0;
 
-        switch (operation){
+        switch (operation){ // do the operation
             case "+":
                 total = num1 + num2;
                 break;
@@ -132,9 +132,9 @@ public class MainWindowController {
                 break;
         }
 
-        String info = historyTA.getText()+operationBoxTF.getText()+"= "+ total +" \n";
+        String info = historyTA.getText()+operationBoxTF.getText()+"= "+ total +" \n"; // print the result in the history
         historyTA.setText(info);
-        operationBoxTF.clear();
+        operationBoxTF.clear(); // clean the operationBox
     }
 
 }
