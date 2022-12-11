@@ -84,7 +84,7 @@ public class MainWindowController {
             operationBoxTF.setText(info);
         }else if (info.equals("Calculate")){ // to calculate
             calculated();
-        }else if(info.equals("clean")){ // clean the history
+        }else if(info.equals("Clean")){ // clean the history
             historyTA.clear();
         }else {
             info = operationBoxTF.getText(); // delete de last character added
