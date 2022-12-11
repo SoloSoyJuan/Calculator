@@ -79,13 +79,16 @@ public class MainWindowController {
             info = operationBoxTF.getText()+info;
             operationBoxTF.setText(info);
         }else if(info.equals("+") || info.equals("-") || info.equals("*") || info.equals("/")){
+            this.operation = info+"";
             info = operationBoxTF.getText()+info;
             operationBoxTF.setText(info);
-            this.operation = info+"";
         }else if (info.equals("Calculate")){
             calculated();
-        }else {
+        }else if(info.equals("clean")){
             historyTA.clear();
+        }else {
+            info = operationBoxTF.getText();
+            operationBoxTF.setText(info.substring(0,info.length()-1));
         }
     }
 
@@ -94,19 +97,42 @@ public class MainWindowController {
         String [] b;
         switch (operation){
             case "+":
-                //b = a.split("+");
+                b = a.split("\\+");
                 break;
             case "-":
                 b = a.split("-");
                 break;
             case "*":
-                //b = a.split("*");
+                b = a.split("\\*");
                 break;
             case "/":
                 b = a.split("/");
                 break;
+            default:
+                b = new String[2];
+                break;
         }
-        String info = historyTA.getText()+operationBoxTF.getText()+"\n";
+
+        int num1 = Integer.parseInt(b[0]);
+        int num2 = Integer.parseInt(b[1]);
+        int total = 0;
+
+        switch (operation){
+            case "+":
+                total = num1 + num2;
+                break;
+            case "-":
+                total = num1 - num2;
+                break;
+            case "*":
+                total = num1 * num2;
+                break;
+            case "/":
+                total = num1 / num2;
+                break;
+        }
+
+        String info = historyTA.getText()+operationBoxTF.getText()+"= "+ total +" \n";
         historyTA.setText(info);
         operationBoxTF.clear();
     }
