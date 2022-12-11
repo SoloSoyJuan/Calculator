@@ -9,15 +9,86 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainWindowController">
    <children>
-      <Button fx:id="OperationBT" layoutX="99.0" layoutY="168.0" mnemonicParsing="false" onAction="#onClick" text="Calculate" />
-      <TextArea fx:id="historyTA" layoutX="324.0" layoutY="71.0" prefHeight="219.0" prefWidth="224.0" />
-      <TextField fx:id="operationBoxTF" layoutX="36.0" layoutY="117.0" prefHeight="37.0" prefWidth="190.0" promptText="2+2">
+      <Button fx:id="OperationBT" layoutX="169.0" layoutY="259.0" mnemonicParsing="false" onAction="#onClick" text="Calculate" />
+      <TextArea fx:id="historyTA" layoutX="324.0" layoutY="79.0" prefHeight="219.0" prefWidth="224.0" />
+      <TextField fx:id="operationBoxTF" layoutX="37.0" layoutY="60.0" prefHeight="37.0" prefWidth="190.0" promptText="2+2">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="historyCleanerBT" layoutX="413.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClick" text="Clean" />
-      <Label layoutX="42.0" layoutY="86.0" text="Type your operation" />
+      <Button fx:id="HistoryCleanerBT" layoutX="413.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClick" text="Clean" />
+      <Label layoutX="45.0" layoutY="43.0" text="Type your operation" />
       <Label layoutX="334.0" layoutY="43.0" text="History of operations" />
+      <Button fx:id="TwoBT" layoutX="116.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClick" text="2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="TreeBT" layoutX="184.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClick" text="3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FourBT" layoutX="46.0" layoutY="151.0" mnemonicParsing="false" onAction="#onClick" text="4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FiveBT" layoutX="116.0" layoutY="151.0" mnemonicParsing="false" onAction="#onClick" text="5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SixBT" layoutX="184.0" layoutY="151.0" mnemonicParsing="false" onAction="#onClick" text="6">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SevenBT" layoutX="47.0" layoutY="195.0" mnemonicParsing="false" onAction="#onClick" text="7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="eightBT" layoutX="117.0" layoutY="195.0" mnemonicParsing="false" onAction="#onClick" text="8">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="NineBT" layoutX="185.0" layoutY="195.0" mnemonicParsing="false" onAction="#onClick" text="9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteBT" layoutX="46.0" layoutY="259.0" mnemonicParsing="false" onAction="#onClick" text="Delete" />
+      <Button fx:id="ZeroBT" layoutX="117.0" layoutY="239.0" mnemonicParsing="false" onAction="#onClick" text="0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="OneBT" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClick" text="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="AdditionBT" layoutX="246.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClick" text="+">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="SubtractionBT" layoutX="246.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClick" prefHeight="39.0" prefWidth="37.0" text="-">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="MultiplicationBT" layoutX="247.0" layoutY="197.0" mnemonicParsing="false" onAction="#onClick" prefHeight="39.0" prefWidth="37.0" text="*">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="DivisionBT" layoutX="247.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClick" prefHeight="39.0" prefWidth="37.0" text="/">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
