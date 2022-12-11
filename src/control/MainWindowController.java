@@ -76,7 +76,7 @@ public class MainWindowController {
         Button b = (Button) event.getSource();
         String info = b.getText();
         if(info.equals("1") || info.equals("2") || info.equals("3") || info.equals("4") || info.equals("5") ||info.equals("6") || info.equals("7") || info.equals("8") || info.equals("9") || info.equals("0")){
-            info = operationBoxTF.getText()+"1";
+            info = operationBoxTF.getText()+info;
             operationBoxTF.setText(info);
         }else if(info.equals("+") || info.equals("-") || info.equals("*") || info.equals("/")){
             info = operationBoxTF.getText()+info;
@@ -94,13 +94,13 @@ public class MainWindowController {
         String [] b;
         switch (operation){
             case "+":
-                b = a.split("+");
+                //b = a.split("+");
                 break;
             case "-":
                 b = a.split("-");
                 break;
             case "*":
-                b = a.split("*");
+                //b = a.split("*");
                 break;
             case "/":
                 b = a.split("/");
